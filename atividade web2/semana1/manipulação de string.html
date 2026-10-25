@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Palíndromo</title>
+</head>
+<body>
+
+    <h1>Verificador de Palíndromo</h1>
+
+    <label>Digite uma palavra:</label>
+    <input type="text" id="palavra" placeholder="Digite uma palavra">
+
+    <br><br>
+
+    <button onclick="verificar()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+
+        function verificar() {
+
+            let palavra = document.getElementById("palavra").value;
+
+            let quantidade = palavra.length;
+
+            let palavraInvertida = palavra.split("").reverse().join("");
+
+            if (palavra.toLowerCase() === palavraInvertida.toLowerCase()) {
+
+                document.getElementById("resultado").innerHTML =
+                    `Quantidade de caracteres: ${quantidade}<br><br>` +
+                    `${palavra} e um palindromo!`;
+
+            } else {
+
+                document.getElementById("resultado").innerHTML =
+                    `Quantidade de caracteres: ${quantidade}<br><br>` +
+                    `${palavra} não e um palindromo`;
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
