@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Avaliação de Risco de Credito</title>
+</head>
+<body>
+
+    <h1>Avaliação de Risco de Credito</h1>
+
+    <label>Renda mensal:</label>
+    <input type="number" id="renda" placeholder="Digite sua renda">
+    <br><br>
+
+    <label>Dívida atual:</label>
+    <input type="number" id="divida" placeholder="Digite sua divida">
+    <br><br>
+
+    <button onclick="avaliar()">Avaliar risco</button>
+
+    <p id="resultado"></p>
+
+    <script>
+
+        function avaliarRiscoDeCredito(rendaMensal, dividaAtual) {
+
+            rendaMensal = parseFloat(rendaMensal);
+            dividaAtual = parseFloat(dividaAtual);
+
+            let TE = (dividaAtual / rendaMensal) * 100;
+
+            if (TE < 10) {
+                return "Risco Baixo";
+            } else if (TE < 30) {
+                return "Risco Moderado";
+            } else {
+                return "Risco Alto";
+            }
+
+        }
+
+        function avaliar() {
+
+            let renda = document.getElementById("renda").value;
+            let divida = document.getElementById("divida").value;
+
+            let resultado = avaliarRiscoDeCredito(renda, divida);
+
+            document.getElementById("resultado").innerHTML =
+                `Seu risco de credito é: ${resultado}`;
+
+        }
+
+    </script>
+
+</body>
+</html>
