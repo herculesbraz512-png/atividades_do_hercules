@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex - pesquisa pokemon</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Pokedex</h1>
+            <p>Pesquise um Pokemon</p>
+        </header>
+
+        <form id="formBusca" class="busca">
+            <label for="nomePokemon">Nome ou numero do Pokemon</label>
+            <div class="linha-busca">
+                <input type="text" id="nomePokemon" placeholder="Ex: beedrill" required>
+                <button type="submit">pesquisar</button>
+            </div>
+        </form>
+
+        <p id="mensagem" class="mensagem" aria-live="polite">Carregando...</p>
+        <section id="resultado" class="cartao" aria-live="polite"></section>
+    </main>
+</body>
+</html>
