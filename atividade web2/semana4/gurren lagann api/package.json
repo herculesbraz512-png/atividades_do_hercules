@@ -1,0 +1,12 @@
+{
+  "name": "gurren lagann api",
+  "version": "1.0.0",
+  "description": "api de personagens do anime Gurren Lagann",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
